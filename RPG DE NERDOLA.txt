@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG NERDOLA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #000000;
+      color: #ffffff;
+    }header {
+  background-color: #4b0082;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #ffffff;
+}
+
+header h1 {
+  margin: 0;
+  color: #ffffff;
+}
+
+nav {
+  background-color: #222;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #ccccff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+.container {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.ordem-sistema {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border: 2px solid #4b0082;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.ordem-sistema h2 {
+  color: #ccccff;
+}
+
+#login {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#login input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+#login button {
+  padding: 10px 20px;
+  background-color: #4b0082;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#arquivos-secretos {
+  display: none;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border: 2px solid #4b0082;
+  border-radius: 10px;
+}
+
+.monstro {
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+.monstro img {
+  max-width: 100%;
+  border: 2px solid #4b0082;
+  border-radius: 10px;
+}
+
+.atributos {
+  margin-top: 10px;
+  background-color: #111;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RPG NERDOLA</h1>
+  </header>  <nav>
+    <a href="#ordem">Sistema de Ordem</a>
+    <a href="#missao">Missões</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#login">Entrar</a>
+  </nav>  <div class="container">
+    <section id="ordem" class="ordem-sistema">
+      <h2>Sistema de Ordem</h2>
+      <p>Este sistema é inspirado no C.R.I.S. da série Ordem Paranormal. Aqui, os jogadores podem acessar informações sobre ordens, habilidades especiais, e realizar ações como rolagens de dados, escolha de classes, ou acesso a arquivos da Ordem.</p>
+    </section><section id="missao" class="ordem-sistema">
+  <h2>Missões Ativas</h2>
+  <p>Você verá aqui os registros das missões mais recentes, com detalhes das criaturas enfrentadas, NPCs importantes e locais investigados.</p>
+</section>
+
+<section id="sobre" class="ordem-sistema">
+  <h2>Sobre o RPG NERDOLA</h2>
+  <p>Um site feito para organizar, registrar e dar suporte a aventuras de RPG no estilo paranormal. Criado por mestres e jogadores que amam mistério, tensão e muita nerdice.</p>
+</section>
+
+<section id="login" class="ordem-sistema">
+  <h2>Entrar no Sistema</h2>
+  <p>Digite seu nome de agente para acessar os arquivos secretos.</p>
+  <input type="text" id="nomeAgente" placeholder="Nome do agente">
+  <button onclick="entrarSistema()">Entrar</button>
+</section>
+
+<section id="arquivos-secretos" class="ordem-sistema">
+  <h2>Arquivos Secretos</h2>
+  <div class="monstro">
+    <h3>Aberração do Breu</h3>
+    <img src="https://via.placeholder.com/600x300.png?text=Aberra%C3%A7%C3%A3o+do+Breu" alt="Aberração do Breu">
+    <p>Uma criatura formada pelo caos, com tentáculos e olhos espalhados pelo corpo. Surge em locais onde o ocultismo se manifestou intensamente.</p>
+    <div class="atributos">
+      <p><strong>Vida:</strong> 120</p>
+      <p><strong>Sanidade:</strong> 60</p>
+      <p><strong>Dano:</strong> 2d10 + 5</p>
+      <p><strong>Tipo:</strong> Entidade Paranormal</p>
+      <p><strong>Fraqueza:</strong> Luz intensa e ataques mentais</p>
+    </div>
+  </div>
+</section>
+
+  </div>  <footer>
+    <p>© 2025 RPG NERDOLA. Todos os direitos reservados.</p>
+  </footer>  <script>
+    function entrarSistema() {
+      const nome = document.getElementById('nomeAgente').value;
+      if (nome.trim() !== '') {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('arquivos-secretos').style.display = 'block';
+      } else {
+        alert('Digite seu nome para continuar.');
+      }
+    }
+  </script></body>
+</html>
